@@ -24,7 +24,7 @@ const orientationButtons = document.querySelectorAll(".btnOrientation");
 
 orientationButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    setOrientation(
+    const updateOrientation = setOrientation(
       orientation,
       `${(button as HTMLButtonElement).dataset.value}`,
       button as HTMLButtonElement,
@@ -33,6 +33,7 @@ orientationButtons.forEach((button) => {
         second: secondColorInput
       }
     );
+    orientation = updateOrientation; // Actualiza la orietnacion cada vez que cambia
   });
 });
 

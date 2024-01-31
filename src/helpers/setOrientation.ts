@@ -28,4 +28,6 @@ export const setOrientation = (
     inputs.second.value,
     orientation
   );
+
+  return orientation; // Es necesario para poder retornal la nueva orientación obtenida
 };
